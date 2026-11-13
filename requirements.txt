@@ -1,0 +1,6 @@
+# rag 패키지 (Colab에는 torch·numpy·pandas·pydantic 이 이미 있음)
+numpy
+pandas
+pydantic>=2
+sentence-transformers>=3   # BGE-M3 (BAAI/bge-m3)
+
