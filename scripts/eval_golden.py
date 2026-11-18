@@ -253,6 +253,35 @@ def has_num(target: float, pool: list[float]) -> bool:
     return any(abs(x - target) <= max(NUM_TOL * abs(target), 0.5) for x in pool)
 
 
+_DATE = re.compile(r"(\d{4})-(\d{1,2})-(\d{1,2})")
+
+
+def calc_values(calc: dict | None) -> list[float]:
+    """계산 정답을 숫자 목록으로 (지어낸 숫자 판정의 근거용). 날짜는 연·월·일, 정답이 없으면(None) 빈 목록"""
+    a = (calc or {}).get("answer")
+    if a is None:
+        return []
+    if isinstance(a, (int, float)):
+        return [float(a)]
+    if d := _DATE.fullmatch(str(a).strip()):
+        return [float(x) for x in d.groups()]
+    return numbers(str(a))
+
+
+def calc_match(calc: dict | None, ans: str, a_nums: list[float]) -> bool | None:
+    """계산 정답이 답에 있는지. 정답이 없는 문항(None: 본인 데이터로 실행 때 정해지는 값)은 채점하지 않음"""
+    a = (calc or {}).get("answer")
+    if a is None:
+        return None
+    if isinstance(a, (int, float)):
+        return has_num(float(a), a_nums)
+    if d := _DATE.fullmatch(str(a).strip()):   # 2027-06-30 = "2027년 6월 30일" = "2027.6.30" = "2027-06-30"
+        y, m, dd = (int(x) for x in d.groups())
+        return bool(re.search(rf"{y}\s*(?:년|[./-])\s*0?{m}\s*(?:월|[./-])\s*0?{dd}(?!\d)", ans or ""))
+    vals = numbers(str(a))
+    return all(has_num(v, a_nums) for v in vals) if vals else re.sub(r"\s+", "", str(a)) in re.sub(r"\s+", "", ans or "")
+
+
 def articles(text: str) -> set[str]:
     t = re.sub(r"\s+", "", text or "")
     return set(re.findall(r"제\d+조(?:의\d+)?", t)) | set(re.findall(r"별표\d+", t))
@@ -267,7 +296,7 @@ def rule_score(it: dict, r: dict) -> dict:
     a_nums = numbers(ans)
     s = {"refused": is_refusal(ans, r.get("kind"))}
     calc = it.get("calculation")
-    s["calc_match"] = has_num(float(calc["answer"]), a_nums) if calc else None
+    s["calc_match"] = calc_match(calc, ans, a_nums)
     # key_facts 중 숫자가 있는 것: 그 숫자가 답에 모두 있는지 (판정 모델이 없을 때의 근사치로도 씀)
     facts = []
     for f in it["key_facts"]:
@@ -280,7 +309,7 @@ def rule_score(it: dict, r: dict) -> dict:
     s["fact_numbers_ok"] = all(ok for f, ok in zip(it["key_facts"], facts) if any(x >= 2 for x in numbers(f))) \
         if any(numbers(f) for f in it["key_facts"]) else None
     # 지어낸 숫자: 답에 나온 10 이상 숫자가 질문·근거·조회·계산 결과 어디에도 없음 (계산 결과처럼 정당하게 새로 나온 값은 오탐 가능)
-    support = numbers(it["question"] + "\n" + r.get("context_text", "")) + ([float(calc["answer"])] if calc else [])
+    support = numbers(it["question"] + "\n" + r.get("context_text", "")) + calc_values(calc)
     s["unsupported_numbers"] = sorted({x for x in a_nums if x >= 10 and not has_num(x, support)})[:10]
     gold_art = articles(it["basis"])
     s["citation_ok"] = bool(gold_art & articles(ans)) if gold_art else None
