@@ -82,7 +82,7 @@ both-09-b,test,제 급여명세의 시간외 항목과 계산 기준을 설명�
 both-10-a,dev,내 신청 현황을 보고 결재 절차가 규정에 맞는지 알려 줘,both,"[""profile"", ""requests""]",,,false,저장된 상태와 절차,,
 both-10-b,dev,제 가족 등록 내역과 부양가족 인정 조건을 확인해 줘,both,"[""profile"", ""family""]",,,false,가족자료와 인정 조건,,
 event-01-a,dev,다음 달 결혼하는데 휴가 며칠이야?,rule,[],,,false,결혼 생애 이벤트,,
-event-01-b,dev,제가 결혼하는데 뭐 받을 수 있어요?,rule,[],,,false,결혼 생애 이벤트,,
+event-01-b,dev,제가 결혼하는데 뭐 받을 수 있어요?,both,"[""profile"", ""family"", ""requests""]",,,false,"결혼 생애 이벤트 / 결혼축하금 생애 1회 한정(팀 결정 2026-11-18, 근거 규정 미확보) → 배우자 여부(family)·과거 경조금 신청(requests) 확인 필요 (이전: rule)",,
 event-02-a,dev,출산하면 회사에서 어떤 휴가와 지원을 신청할 수 있어?,rule,[],,,false,"출산 지원 / 검수: 앞으로 할 신청·절차를 묻는 질문이라 신청 현황(requests)·급여(payroll) 조회는 정답에서 제외 (이전: profile,requests)",,
 event-02-b,dev,아이를 낳을 예정인데 출산 관련 신청 절차가 궁금해,rule,[],,,false,"출산 지원 / 검수: 앞으로 할 신청·절차를 묻는 질문이라 신청 현황(requests)·급여(payroll) 조회는 정답에서 제외 (이전: profile,requests)",,
 event-03-a,test,이사하면 이전 비용을 지원받을 수 있나요?,rule,[],,,false,이사 이벤트,,
