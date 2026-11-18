@@ -57,6 +57,11 @@ python eval/golden/admin/build_admin_golden.py             # 관리자 골든셋
 
 backend가 다른 곳에 있으면 `BACKEND_DIR` 환경변수로 지정하세요. 실행에는 backend의 가상환경(`backend/.venv`)을 쓰면 돼요.
 
+## Colab Pro+ · Qwen3.5-27B
+
+팀은 Colab Pro+를 쓸 수 있고, 답변 생성 모델로 **Qwen3.5-27B**(비교용 9B)를 vLLM으로 띄워 평가해요.
+GPU별 모델 선택, vLLM 실행, 환경변수, 로컬 백엔드 연결은 [docs/COLAB_QWEN.md](docs/COLAB_QWEN.md)에 있어요.
+
 ## 현재 검색 기준선
 
 keyword 모드, 임직원 test 166문항: Recall@5 0.40 · Recall@10 0.48 · Recall@30 0.60 · MRR 0.39
