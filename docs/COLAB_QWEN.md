@@ -56,6 +56,7 @@ curl http://127.0.0.1:8000/v1/models     # 준비되면 qwen3.5-27b가 보임. �
 ```
 
 - 모델은 1번 표에서 GPU에 맞는 것으로 바꿔요.
+- `--max-num-seqs 16`은 꼭 넣어요. Qwen3.5는 Mamba 층이 있어서 기본값(256)이면 A100 40GB에서 `max_num_seqs (256) exceeds available Mamba cache blocks` 오류로 시작이 안 돼요. 평가는 한 번에 한 문항씩이라 16이면 충분해요.
 - 생각 모드 끄기: `vllm serve --help`에 `--default-chat-template-kwargs`가 있으면 `--default-chat-template-kwargs '{"enable_thinking": false}'`를 붙여요 (아래 5번 참고).
 
 ### 3-3. 환경변수
