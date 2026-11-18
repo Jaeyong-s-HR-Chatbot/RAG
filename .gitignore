@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+eval/golden/runs/
+eval/golden/cache/
+*.zip
+.env
