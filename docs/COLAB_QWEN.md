@@ -22,7 +22,7 @@ Colab 메뉴 **런타임 → 런타임 유형 변경**에서 GPU를 고르고, G
 Colab (/content/hr_chatbot)
 ├─ backend/      git clone (챗봇 코드: 답변 생성 프롬프트·파이프라인)
 ├─ DB/           git clone (규정·법령 조문, HR 데이터)
-├─ RAG-hyerim/   git clone (골든셋·평가 스크립트)
+├─ RAG/   git clone (골든셋·평가 스크립트)
 └─ vLLM 서버      http://127.0.0.1:8000/v1  (OpenAI 형식)
 ```
 
@@ -36,7 +36,7 @@ backend는 `LLM_BASE_URL`이 있으면 그 주소의 OpenAI 형식 서버로 답
 mkdir -p /content/hr_chatbot && cd /content/hr_chatbot
 git clone https://github.com/Jaeyong-s-HR-Chatbot/backend.git
 git clone https://github.com/Jaeyong-s-HR-Chatbot/DB.git
-git clone https://github.com/Jaeyong-s-HR-Chatbot/RAG-hyerim.git
+git clone https://github.com/Jaeyong-s-HR-Chatbot/RAG.git
 pip install -r backend/requirements.txt
 pip install -U vllm
 ```
@@ -73,7 +73,7 @@ curl http://127.0.0.1:8000/v1/models     # 준비되면 qwen3.5-27b가 보임. �
 ### 3-4. 평가
 
 ```bash
-cd /content/hr_chatbot/RAG-hyerim
+cd /content/hr_chatbot/RAG
 python scripts/eval_golden.py retrieval --split test                          # ② 검색 지표
 python scripts/eval_golden.py generate --mode oracle --split dev --limit 20   # ④ 답변 생성 (프롬프트 조정은 dev로)
 python scripts/eval_golden.py score --run eval/golden/runs/<방금 생긴 폴더>      # 채점

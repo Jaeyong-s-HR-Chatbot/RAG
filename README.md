@@ -1,4 +1,6 @@
-# RAG-hyerim — HR 챗봇 골든셋과 평가
+# RAG — HR 챗봇 골든셋과 평가
+
+> 2026-11-19 저장소 이름을 `RAG`에서 `RAG`로 바꿨어요. 예전 주소는 GitHub가 자동으로 넘겨 줘요. 예전 검색 패키지(RAG-taehyeon)와 초기 실험 노트북은 [experiments](https://github.com/Jaeyong-s-HR-Chatbot/experiments)에 있어요.
 
 누리철도 HR 챗봇을 단계별로 평가하는 정답 세트(골든셋)와 평가 스크립트예요. 기준은 팀 설계도(임직원·관리자 질문 처리 흐름)예요.
 
@@ -44,7 +46,7 @@ hr_chatbot/
 ├─ backend/      챗봇 코드 (app/)
 ├─ DB/           규정 청크·HR CSV
 ├─ 질문셋/        관리자_질문셋_v2.csv
-└─ RAG-hyerim/   이 레포
+└─ RAG/   이 레포
 ```
 
 ```bash
@@ -64,7 +66,7 @@ GPU별 모델 선택, vLLM 실행, 환경변수, 로컬 백엔드 연결은 [doc
 
 | 노트북 | Colab |
 | --- | --- |
-| 관리자 파이프라인 평가 (`colab/admin_eval.ipynb`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jaeyong-s-HR-Chatbot/RAG-hyerim/blob/main/colab/admin_eval.ipynb) |
+| 관리자 파이프라인 평가 (`colab/admin_eval.ipynb`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jaeyong-s-HR-Chatbot/RAG/blob/main/colab/admin_eval.ipynb) |
 
 ## 현재 검색 기준선
 
