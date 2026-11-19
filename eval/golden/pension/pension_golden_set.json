@@ -1,7 +1,7 @@
 {
  "name": "누리철도 HR 챗봇 퇴직연금 골든셋",
  "version": "2026-11-19",
- "source": "팀 골든셋(Jaeyong-s-HR-Chatbot/RAG-hyerim eval/golden, 2026-11-18)과 같은 형식. 질문은 퇴직연금 확장(팀 확정 전)용 추가분",
+ "source": "팀 골든셋(Jaeyong-s-HR-Chatbot/RAG eval/golden, 2026-11-18)과 같은 형식. 질문은 퇴직연금 확장(팀 확정 전)용 추가분",
  "id_reference": "document_id / chunk_id = HR DB rag.documents / rag.chunks (규정 r01~r33, 법령 L01~L13, 팀 가정 기준 S01). 본인 데이터는 pension.* · hr.*",
  "personas": {
   "P1": {
