@@ -29,7 +29,7 @@ from datetime import datetime
 from pathlib import Path
 from time import perf_counter
 
-ROOT = Path(__file__).resolve().parents[1]          # eval/ 폴더가 있는 곳 (backend 또는 RAG-hyerim)
+ROOT = Path(__file__).resolve().parents[1]          # eval/ 폴더가 있는 곳 (backend 또는 RAG)
 # 챗봇 코드(app/)가 있는 backend 폴더. 이 파일이 backend 밖에 있으면 옆 폴더의 backend, BACKEND_DIR로 바꿀 수 있음
 BACKEND = Path(os.getenv("BACKEND_DIR") or (ROOT if (ROOT / "app").is_dir() else ROOT.parent / "backend")).resolve()
 REPO = BACKEND.parent                                 # hr_chatbot (DB/ 폴더가 있는 곳)
