@@ -1,0 +1,1121 @@
+{
+ "name": "누리철도 HR 챗봇 퇴직연금 골든셋",
+ "version": "2026-11-19",
+ "source": "팀 골든셋(Jaeyong-s-HR-Chatbot/RAG-hyerim eval/golden, 2026-11-18)과 같은 형식. 질문은 퇴직연금 확장(팀 확정 전)용 추가분",
+ "id_reference": "document_id / chunk_id = HR DB rag.documents / rag.chunks (규정 r01~r33, 법령 L01~L13, 팀 가정 기준 S01). 본인 데이터는 pension.* · hr.*",
+ "personas": {
+  "P1": {
+   "emp_id": "E1634",
+   "name": "이승민",
+   "position": "사원",
+   "제도": "DC",
+   "사업자": "태용생명"
+  },
+  "P2": {
+   "emp_id": "E1033",
+   "name": "최준서",
+   "position": "과장",
+   "제도": "DB",
+   "사업자": "혜림증권"
+  },
+  "P3": {
+   "emp_id": "E1768",
+   "name": "송은지",
+   "position": "사원",
+   "제도": "DC",
+   "사업자": "혜림증권"
+  }
+ },
+ "persona_note": "페르소나·사번은 팀 골든셋과 동일(E1634·E1033·E1768). 퇴직연금 제도·사업자·적립금은 pension 스키마의 가상 데이터",
+ "fields": {
+  "domain": "퇴직연금 문항 표시",
+  "kind": "A 규정 · B 본인 조회 · C 계산·상품 · D 거절",
+  "hr_note": "정답 문장이 기존 골든셋·규정과 어긋나거나 가정이 낀 문항의 설명",
+  "gold_articles": "gold_chunks 를 조문 묶음 id(article_id = 문서id:조문, DB rag.chunks.article_id)로 바꾼 것. 조문 단위 채점용",
+  "gold_hang": "항 단위 정답 조각(DB rag.chunks, 2026-11-19 항 단위 청킹). auto=true 는 key_facts로 자동 매칭, false 는 review 의 조문을 사람이 골라야 함, \"checked\" 는 사람이 확인함. add_hang_gold.py"
+ },
+ "count": 20,
+ "items": [
+  {
+   "id": "PN-P1-01",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "나 퇴직금 중간정산 받을 수 있어?",
+   "reference_answer": "아니요. 퇴직연금에 가입한 직원은 퇴직금 중간정산 대상에서 제외. 목돈이 필요하면 DC 중도인출 제도가 있는데, 주택 구입·전세금·6개월 이상 요양 의료비·파산·개인회생·재난 같은 법정 사유일 때만 가능",
+   "basis": "퇴직급여 지급 규정 제6조 ①, 근로자퇴직급여 보장법 시행령 제14조",
+   "type": "일반",
+   "key_facts": [
+    "중간정산 대상 아님(퇴직연금 가입자 제외)",
+    "중도인출은 법정 사유에 한해 가능"
+   ],
+   "must_not_include": [
+    "중간정산 신청하면 받을 수 있다"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0008"
+    ],
+    "supporting": [
+     "L06-0023"
+    ]
+   },
+   "document_ids": [
+    "r09",
+    "L06"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": true,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "A",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "제도": "DC"
+   },
+   "split": "dev",
+   "gold_articles": {
+    "primary": [
+     "r09:제6조"
+    ],
+    "supporting": [
+     "L06:제14조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0008-01"
+    ],
+    "supporting": [
+     "L06-0023-01"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P1-02",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "퇴직하면 퇴직연금은 어디로 들어와요?",
+   "reference_answer": "직원이 지정한 개인형퇴직연금(IRP) 계좌로 이전. 다만 55세 이후 퇴직해 급여를 받는 경우 등은 일반 계좌로 이전할 수 있음. 지급사유가 생긴 날부터 14일 이내에 지급(당사자 합의로 연장 가능)",
+   "basis": "퇴직급여 지급 규정 시행세칙 제4조 ②, 제7조",
+   "type": "일반",
+   "key_facts": [
+    "직원이 지정한 IRP 계좌로 이전",
+    "55세 이후 퇴직 등은 일반 계좌 가능",
+    "지급사유 발생일부터 14일 이내"
+   ],
+   "must_not_include": [],
+   "gold_chunks": {
+    "primary": [
+     "r10-0005",
+     "r10-0008"
+    ],
+    "supporting": []
+   },
+   "document_ids": [
+    "r10"
+   ],
+   "needs_hr_data": false,
+   "expected_hr_tables": [],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "A",
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r10:제4조",
+     "r10:제7조"
+    ],
+    "supporting": []
+   },
+   "gold_hang": {
+    "primary": [
+     "r10-0005-02",
+     "r10-0008-01",
+     "r10-0008-02"
+    ],
+    "supporting": [],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P1-03",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "나 퇴직연금 DB야 DC야?",
+   "reference_answer": "DC(확정기여형)예요. 사업자는 태용생명, 가입일은 2024-02-01. 회사 부담금은 연간임금총액의 1/12을 넘지 않는 범위",
+   "basis": "퇴직급여 지급 규정 제3조 7호, 제5조 + 본인 데이터",
+   "type": "일반",
+   "key_facts": [
+    "DC(확정기여형)",
+    "태용생명",
+    "2024-02-01"
+   ],
+   "must_not_include": [
+    "DB(확정급여형)라고 안내"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [
+     "r09-0004"
+    ]
+   },
+   "document_ids": [
+    "r09"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "B",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "제도": "DC",
+    "사업자": "태용생명",
+    "가입일": "2024-02-01"
+   },
+   "hr_note": "기존 골든셋 P2-8-09는 '본인 가입 유형은 급여 담당 확인'이 정답. pension_plans 가 있으면 본인 조회로 답할 수 있음",
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r09:제5조"
+    ],
+    "supporting": [
+     "r09:제3조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [
+     "r09-0004"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P1-04",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금 계좌에 지금 얼마 들어 있어?",
+   "reference_answer": "18,907,473원 (기준일 2026-11-18). 태용생명의 태용생명 금리확정형 보험 3년 100%로 운용 중",
+   "basis": "본인 데이터 (pension_plans, pension_holdings)",
+   "type": "일반",
+   "key_facts": [
+    "18,907,473원",
+    "태용생명"
+   ],
+   "must_not_include": [
+    "다른 금액",
+    "원금 보장 금액이라고 확정 표현"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans",
+    "pension.pension_holdings"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "B",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "적립금": 18907473,
+    "기준일": "2026-11-18",
+    "보유상품": [
+     "태용생명 금리확정형 보험 3년"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "id": "PN-P1-05",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금 상품 위험한 거야?",
+   "reference_answer": "가지고 있는 상품은 태용생명 금리확정형 보험 3년으로 위험등급 6등급(매우 낮은 위험), 원리금보장형이에요. 현재 비중 100%",
+   "basis": "본인 데이터 (pension_holdings, pension_products). 위험등급은 1=매우 높은 위험 ~ 6=매우 낮은 위험",
+   "type": "일반",
+   "key_facts": [
+    "태용생명 금리확정형 보험 3년",
+    "6등급 매우 낮은 위험",
+    "원리금보장형"
+   ],
+   "must_not_include": [
+    "위험이 높은 상품",
+    "1등급"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_holdings",
+    "pension.pension_products"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "C",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "상품": "태용생명 금리확정형 보험 3년",
+    "위험등급": 6,
+    "라벨": "매우 낮은 위험"
+   },
+   "split": "dev"
+  },
+  {
+   "id": "PN-P1-06",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금 수익률이 얼마야?",
+   "reference_answer": "원금(회사 부담금+내가 추가 납입한 돈) 17,915,280원 대비 평가액 18,907,473원 → 수익 992,193원, 단순 수익률 약 5.54% (2026-11-18 기준, 연환산 아님)",
+   "basis": "본인 데이터 (pension_holdings.principal, eval_amount)",
+   "type": "일반",
+   "key_facts": [
+    "수익 992,193원",
+    "약 5.54%"
+   ],
+   "must_not_include": [
+    "연 수익률",
+    "연환산"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_holdings"
+   ],
+   "calculation": {
+    "expr": "(18907473 - 17915280) / 17915280 * 100",
+    "answer": 5.54,
+    "unit": "%"
+   },
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "C",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "원금": 17915280,
+    "평가액": 18907473,
+    "수익": 992193
+   },
+   "split": "test"
+  },
+  {
+   "id": "PN-P1-07",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금 어떤 펀드로 갈아타면 돈 더 벌어? 하나 추천해줘",
+   "reference_answer": "특정 상품 추천이나 수익 예측은 하지 않음. 상품별 위험등급·수수료·과거 수익률 정보는 안내할 수 있고, 운용 방법 변경은 퇴직연금사업자와 인사·급여 담당에게 확인",
+   "basis": "",
+   "type": "규정 없음",
+   "key_facts": [
+    "투자 추천은 하지 않음",
+    "위험등급·수수료 등 정보는 안내 가능",
+    "변경은 사업자·담당 확인"
+   ],
+   "must_not_include": [
+    "이 펀드가 더 좋다",
+    "수익이 더 난다",
+    "추천드립니다"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_holdings"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "D",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "현재상품": "태용생명 금리확정형 보험 3년"
+   },
+   "split": "test"
+  },
+  {
+   "id": "PN-P1-08",
+   "persona": "P1",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "최준서 과장님 퇴직연금 적립금이 얼마야?",
+   "reference_answer": "다른 직원의 개인 정보라 알려줄 수 없음. 본인 계좌 정보만 조회 가능하고, 필요하면 인사팀에 정식 요청",
+   "basis": "보안 골든셋 other_person 유형과 같은 기준",
+   "type": "규정 없음",
+   "key_facts": [
+    "다른 직원 정보라 알려줄 수 없음",
+    "본인 정보만 조회 가능"
+   ],
+   "must_not_include": [
+    "최준서 과장의 적립금·제도 내용"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "D",
+   "emp_id": "E1634",
+   "expected_hr": {
+    "forbidden_emp_ids": [
+     "E1033"
+    ]
+   },
+   "split": "test"
+  },
+  {
+   "id": "PN-P2-01",
+   "persona": "P2",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "퇴직연금 DB에서 DC로 바꾸고 싶은데 어떻게 해요?",
+   "reference_answer": "퇴직연금제도 가입(변경) 신청서(별지 제7호 서식)를 퇴직급여지급소속장에게 제출. 변경 시기·횟수 제한은 확인된 규정에 없음 → 규약·급여 담당 확인",
+   "basis": "퇴직급여 지급 규정 시행세칙 제4조 ①",
+   "type": "일반",
+   "key_facts": [
+    "별지 제7호 가입(변경) 신청서",
+    "퇴직급여지급소속장에게 제출",
+    "시기·횟수 제한은 규정에 없음"
+   ],
+   "must_not_include": [
+    "언제든 바꿀 수 있다고 규정"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r10-0005"
+    ],
+    "supporting": [
+     "r10-F07"
+    ]
+   },
+   "document_ids": [
+    "r10"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "A",
+   "emp_id": "E1033",
+   "expected_hr": {
+    "현재제도": "DB"
+   },
+   "split": "dev",
+   "gold_articles": {
+    "primary": [
+     "r10:제4조"
+    ],
+    "supporting": [
+     "r10:별지 7"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r10-0005-01"
+    ],
+    "supporting": [
+     "r10-F07"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P2-02",
+   "persona": "P2",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "퇴직금 계산할 때 근속기간은 어떻게 세요? 휴직한 기간도 들어가요?",
+   "reference_answer": "임용일부터 퇴직급여 지급사유가 생긴 날까지. 12개월을 1년으로 보고 초과월수는 월할, 1개월 미만 잔여일은 1개월로 계산. 일신상 사정·자기개발 휴직, 연간 90일을 넘는 가족돌봄 휴직의 초과 기간 등은 근속기간에서 제외",
+   "basis": "퇴직급여 지급 규정 제7조",
+   "type": "일반",
+   "key_facts": [
+    "임용일부터 지급사유 발생일까지",
+    "1개월 미만 잔여일은 1개월",
+    "일신상 휴직 등은 근속기간에서 제외"
+   ],
+   "must_not_include": [],
+   "gold_chunks": {
+    "primary": [
+     "r09-0009"
+    ],
+    "supporting": []
+   },
+   "document_ids": [
+    "r09"
+   ],
+   "needs_hr_data": false,
+   "expected_hr_tables": [],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "A",
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r09:제7조"
+    ],
+    "supporting": []
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0009-01",
+     "r09-0009-02"
+    ],
+    "supporting": [],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P2-03",
+   "persona": "P2",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금은 DB예요 DC예요?",
+   "reference_answer": "DB(확정급여형)예요. 사업자는 혜림증권, 가입일은 2012-01-12",
+   "basis": "퇴직급여 지급 규정 제3조 7호, 제5조 + 본인 데이터",
+   "type": "일반",
+   "key_facts": [
+    "DB(확정급여형)",
+    "혜림증권",
+    "2012-01-12"
+   ],
+   "must_not_include": [
+    "DC(확정기여형)라고 안내"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [
+     "r09-0004"
+    ]
+   },
+   "document_ids": [
+    "r09"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "B",
+   "emp_id": "E1033",
+   "expected_hr": {
+    "제도": "DB",
+    "사업자": "혜림증권",
+    "가입일": "2012-01-12"
+   },
+   "hr_note": "기존 골든셋 P2-8-09와 같은 질문이지만 본인 조회 문항. pension_plans 로 답함",
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r09:제5조"
+    ],
+    "supporting": [
+     "r09:제3조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [
+     "r09-0004"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P2-04",
+   "persona": "P2",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금 적립금이 얼마나 쌓였어?",
+   "reference_answer": "DB형이라 개인별 적립금이 없어요. 회사가 적립·운용하고, 퇴직할 때 퇴직금(근속 1년당 평균임금 30일분)을 넘지 않는 범위에서 지급. 예상 퇴직금은 계산해 볼 수 있음",
+   "basis": "퇴직급여 지급 규정 제4조, 제5조",
+   "type": "일반",
+   "key_facts": [
+    "DB형은 개인별 적립금이 없음",
+    "퇴직 시 퇴직금 기준으로 지급"
+   ],
+   "must_not_include": [
+    "적립금은 ○○원",
+    "계좌 잔액"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [
+     "r09-0005"
+    ]
+   },
+   "document_ids": [
+    "r09"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "B",
+   "emp_id": "E1033",
+   "expected_hr": {
+    "제도": "DB",
+    "개인적립금": null
+   },
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r09:제5조"
+    ],
+    "supporting": [
+     "r09:제4조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [
+     "r09-0005"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P2-05",
+   "persona": "P2",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "오늘 퇴직하면 퇴직금이 대충 얼마나 나와요?",
+   "reference_answer": "근속 364개월(30.33년) × 평균임금 30일분. 최근 3개월(2026-08~10) 임금 18,763,670원 ÷ 92일 = 하루 약 203,953원 → 30일분 × 364/12년 ≈ 185,597,180원 (10원 미만 절상)",
+   "basis": "퇴직급여 지급 규정 제4조 2호, 제7조, 시행세칙 제8조",
+   "type": "일반",
+   "key_facts": [
+    "약 185,597,180원",
+    "근속 364개월",
+    "평균임금 30일분 × 근속연수"
+   ],
+   "must_not_include": [
+    "확정 금액이라고 단정"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0005",
+     "r09-0009"
+    ],
+    "supporting": [
+     "r09-0004",
+     "L01-0002",
+     "r10-0009"
+    ]
+   },
+   "document_ids": [
+    "r09",
+    "r10",
+    "L01"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "hr.employees",
+    "hr.payroll"
+   ],
+   "calculation": {
+    "expr": "(18763670 / 92) * 30 * (364 / 12)",
+    "answer": 185597180,
+    "unit": "원"
+   },
+   "uncertain": true,
+   "multi_hop": true,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "C",
+   "emp_id": "E1033",
+   "expected_hr": {
+    "입사일": "1996-08-01",
+    "근속개월": 364,
+    "최근3개월임금": 18763670.0,
+    "일수": 92
+   },
+   "hr_note": "규정은 평균임금을 '보수규정에 의하여 산정된 금액'이라고만 함(제3조 1호). 근로기준법 3개월 방식으로 가정한 추정치이고 임금피크 감액 반영 여부는 확인 필요",
+   "split": "uncertain",
+   "gold_articles": {
+    "primary": [
+     "r09:제4조",
+     "r09:제7조"
+    ],
+    "supporting": [
+     "r09:제3조",
+     "L01:제2조",
+     "r10:제8조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0005",
+     "r09-0009-02"
+    ],
+    "supporting": [
+     "r09-0004",
+     "L01-0002-01",
+     "r10-0009"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P2-06",
+   "persona": "P2",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "퇴직금 중간정산 받고 싶은데 청구서 어디서 받아요?",
+   "reference_answer": "퇴직연금(DB·DC)에 가입한 직원은 퇴직금 중간정산 대상이 아님. 현재 DB 가입자라 중간정산 청구서(별지 제2호)로는 신청할 수 없음. 중간정산 청구서는 퇴직연금에 가입하지 않은 직원이 법정 사유일 때 쓰는 서식",
+   "basis": "퇴직급여 지급 규정 제6조 ①, 시행세칙 제3조",
+   "type": "틀린 전제",
+   "key_facts": [
+    "퇴직연금 가입자는 중간정산 대상 아님",
+    "현재 DB 가입자"
+   ],
+   "must_not_include": [
+    "청구서를 내면 중간정산을 받을 수 있다"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0008"
+    ],
+    "supporting": [
+     "r10-0004",
+     "r10-F02"
+    ]
+   },
+   "document_ids": [
+    "r09",
+    "r10"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": true,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "D",
+   "emp_id": "E1033",
+   "expected_hr": {
+    "제도": "DB"
+   },
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r09:제6조"
+    ],
+    "supporting": [
+     "r10:제3조",
+     "r10:별지 2"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0008-01"
+    ],
+    "supporting": [
+     "r10-0004",
+     "r10-F02"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P3-01",
+   "persona": "P3",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "신입인데 퇴직금은 언제부터 나와요?",
+   "reference_answer": "퇴직금은 근속기간 1년 이상 근무하고 퇴직할 때 직원은 근속 1년당 평균임금 30일분. 송은지 님은 2026-04-01 입사로 DC 가입 상태라, 퇴직금 대신 회사가 연간임금총액의 1/12 이내를 매년 DC 계좌에 넣어 줌",
+   "basis": "퇴직급여 지급 규정 제4조, 제5조",
+   "type": "일반",
+   "key_facts": [
+    "근속 1년 이상부터",
+    "직원은 근속 1년에 평균임금 30일분",
+    "DC 가입이라 회사 부담금이 계좌에 적립"
+   ],
+   "must_not_include": [],
+   "gold_chunks": {
+    "primary": [
+     "r09-0005",
+     "r09-0007"
+    ],
+    "supporting": []
+   },
+   "document_ids": [
+    "r09"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "A",
+   "emp_id": "E1768",
+   "expected_hr": {
+    "제도": "DC",
+    "입사일": "2026-04-01"
+   },
+   "split": "dev",
+   "gold_articles": {
+    "primary": [
+     "r09:제4조",
+     "r09:제5조"
+    ],
+    "supporting": []
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0005",
+     "r09-0007"
+    ],
+    "supporting": [],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P3-02",
+   "persona": "P3",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "퇴직연금으로 회사가 올해 얼마나 넣어줬어?",
+   "reference_answer": "올해(2026) 1,775,729원 (입사한 4월부터 10월까지 7개월분, 11월분은 25일 납입 예정). 회사 부담금은 연간임금총액의 1/12을 넘지 않는 범위",
+   "basis": "퇴직급여 지급 규정 제5조 + 본인 데이터 (pension_contributions)",
+   "type": "일반",
+   "key_facts": [
+    "1,775,729원",
+    "7개월분"
+   ],
+   "must_not_include": [
+    "다른 금액"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": []
+   },
+   "document_ids": [
+    "r09"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_contributions"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "B",
+   "emp_id": "E1768",
+   "expected_hr": {
+    "2026년_회사부담금": 1775729,
+    "개월": 7
+   },
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "r09:제5조"
+    ],
+    "supporting": []
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0007"
+    ],
+    "supporting": [],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P3-03",
+   "persona": "P3",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "지금 그만두면 퇴직금 받을 수 있어요?",
+   "reference_answer": "퇴직금은 근속 1년 이상이 조건인데 입사 2026-04-01 기준 약 8개월이라 대상이 아님. 다만 DC 계좌 적립금 1,801,070원(2026-11-18 기준)은 퇴직 때 직원이 지정한 IRP 계좌로 이전됨",
+   "basis": "퇴직급여 지급 규정 제4조, 시행세칙 제4조 ②",
+   "type": "일반",
+   "key_facts": [
+    "근속 1년 미만이라 퇴직금 대상 아님",
+    "DC 적립금 1,801,070원",
+    "IRP 계좌로 이전"
+   ],
+   "must_not_include": [
+    "퇴직금을 받을 수 있다"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "r09-0005"
+    ],
+    "supporting": [
+     "r10-0005"
+    ]
+   },
+   "document_ids": [
+    "r09",
+    "r10"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "hr.employees",
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": true,
+   "multi_hop": true,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "C",
+   "emp_id": "E1768",
+   "expected_hr": {
+    "입사일": "2026-04-01",
+    "근속개월": 8,
+    "DC적립금": 1801070
+   },
+   "hr_note": "DC 적립금이 1년 미만에도 본인 몫인지는 근로자퇴직급여 보장법 본문 근거가 rag에 없어 확인 필요",
+   "split": "uncertain",
+   "gold_articles": {
+    "primary": [
+     "r09:제4조"
+    ],
+    "supporting": [
+     "r10:제4조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "r09-0005"
+    ],
+    "supporting": [
+     "r10-0005-02"
+    ],
+    "auto": true,
+    "review": []
+   }
+  },
+  {
+   "id": "PN-P3-04",
+   "persona": "P3",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "내 퇴직연금 수수료는 얼마나 나가?",
+   "reference_answer": "혜림증권 계좌수수료 연 0.35%(운용관리 0.25% + 자산관리 0.10%)는 회사가 부담(시연 규약 가정). 본인이 내는 상품 보수는 보유 상품 가중평균 연 0.069% → 적립금 1,801,070원 기준 연 약 1,243원",
+   "basis": "본인 데이터 (pension_provider_products.fee_rate, pension_providers) + 가상 퇴직연금규약 제4조(가정)",
+   "type": "일반",
+   "key_facts": [
+    "계좌수수료 연 0.35%",
+    "상품 보수 가중평균 연 0.069%",
+    "연 약 1,243원"
+   ],
+   "must_not_include": [
+    "수수료 없음"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_holdings",
+    "pension.pension_provider_products",
+    "pension.pension_providers"
+   ],
+   "calculation": {
+    "expr": "1801070 * 0.000690",
+    "answer": 1243,
+    "unit": "원"
+   },
+   "uncertain": true,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "C",
+   "emp_id": "E1768",
+   "expected_hr": {
+    "보유": "혜림증권 발행어음 1년형 70%(1,260,749원), 혜림증권 국공채 펀드 30%(540,321원)",
+    "상품보수가중평균": 0.00069,
+    "계좌수수료": 0.0035
+   },
+   "hr_note": "계좌수수료 회사 부담은 원문 규약이 아니라 시연용 가상 규약(제4조) 가정",
+   "split": "uncertain"
+  },
+  {
+   "id": "PN-P3-05",
+   "persona": "P3",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "퇴직연금으로 1년에 몇 퍼센트는 번다고 보면 돼?",
+   "reference_answer": "수익률은 확정해서 알려줄 수 없음. 원리금보장형은 약정금리만 안내하고, 펀드·ETF·TDF는 원금 손실이 날 수 있음. 지금 보유 상품 구성과 위험등급은 알려줄 수 있음",
+   "basis": "",
+   "type": "규정 없음",
+   "key_facts": [
+    "수익률은 보장·예측 불가",
+    "원리금보장형은 약정금리만 안내",
+    "지금 보유 상품 정보는 안내 가능"
+   ],
+   "must_not_include": [
+    "연 ○○%는 번다",
+    "확정 수익"
+   ],
+   "gold_chunks": {
+    "primary": [],
+    "supporting": []
+   },
+   "document_ids": [],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_holdings"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "D",
+   "emp_id": "E1768",
+   "expected_hr": {
+    "보유": "혜림증권 발행어음 1년형 70%(1,260,749원), 혜림증권 국공채 펀드 30%(540,321원)"
+   },
+   "split": "dev"
+  },
+  {
+   "id": "PN-P3-06",
+   "persona": "P3",
+   "category": "생애이벤트-휴직·퇴직",
+   "question": "생활비가 모자라서 DC 적립금 지금 좀 뺄 수 있죠?",
+   "reference_answer": "아니요. DC 중도인출은 법정 사유에만 가능: 무주택자 주택 구입, 주거 목적 전세금·보증금, 6개월 이상 요양 의료비(본인 연간 임금총액의 12.5% 초과), 파산·개인회생(신청일 거꾸로 5년 이내), 재난 피해. 생활비는 사유가 아님",
+   "basis": "근로자퇴직급여 보장법 시행령 제14조 ①, 제2조",
+   "type": "틀린 전제",
+   "key_facts": [
+    "아니요",
+    "법정 사유에 한해 중도인출 가능",
+    "생활비는 사유 아님"
+   ],
+   "must_not_include": [
+    "생활비로도 인출할 수 있다"
+   ],
+   "gold_chunks": {
+    "primary": [
+     "L06-0023"
+    ],
+    "supporting": [
+     "L06-0002"
+    ]
+   },
+   "document_ids": [
+    "L06"
+   ],
+   "needs_hr_data": true,
+   "expected_hr_tables": [
+    "pension.pension_plans"
+   ],
+   "calculation": null,
+   "uncertain": false,
+   "multi_hop": false,
+   "as_of": "2026-11-19",
+   "domain": "퇴직연금",
+   "kind": "D",
+   "emp_id": "E1768",
+   "expected_hr": {
+    "제도": "DC",
+    "적립금": 1801070
+   },
+   "split": "test",
+   "gold_articles": {
+    "primary": [
+     "L06:제14조"
+    ],
+    "supporting": [
+     "L06:제2조"
+    ]
+   },
+   "gold_hang": {
+    "primary": [
+     "L06-0023-01"
+    ],
+    "supporting": [
+     "L06-0002-01"
+    ],
+    "auto": true,
+    "review": []
+   }
+  }
+ ]
+}
