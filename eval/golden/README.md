@@ -4,6 +4,7 @@
 | --- | --- | --- |
 | [`../intent/intent_cases.jsonl`](../intent/intent_cases.jsonl) | 178 | ① 의도 분류 |
 | [`golden_set.json`](golden_set.json) | 279 | ② 검색 · ③ 리랭커 · 계산 · ④ 답변 생성 |
+| [`pension/pension_golden_set.json`](pension/pension_golden_set.json) | 20 | 퇴직연금 확장 문항 (규정·본인 조회·계산·거절, 팀 확정 전) |
 | [`rerank_cases.jsonl`](rerank_cases.jsonl) | 30 | ③ 리랭커 (되묻기 · 함정 조문) |
 | [`hang_review.csv`](hang_review.csv) | 87 | 항 단위 정답 중 사람이 확인할 문항 (`add_hang_gold.py`) |
 | [`../security/security_cases.jsonl`](../security/security_cases.jsonl) | 32 | 보안 |
