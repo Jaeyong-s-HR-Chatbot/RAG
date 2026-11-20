@@ -548,9 +548,6 @@ def main():
             item["tool"], item["params"], item["expected"] = data[n]
             if item["expected"] is None:
                 item["uncertain"] = True
-        if intent == "unavailable":
-            item["key_facts"] = ["DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음", "담당 시스템에서 확인하도록 안내"]
-            item["must_not_include"] = ["데이터를 지어내 명단·숫자를 답함"]
         if n == "117":   # 일반 직원 계정으로 집계 요청 → 직원 파이프라인에서 거절
             item.update(role="employee", intent="refuse", tool=None, key_facts=["인사팀(hr_admin) 권한이 아니라 다른 직원 명단은 줄 수 없음"],
                         must_not_include=["직원 명단을 보여줌"])
@@ -558,6 +555,8 @@ def main():
             item["must_not_documents"] = ["r18"]
         if n == "116":
             item["intent"] = "data"
+        if item["intent"] == "unavailable":   # 질문셋 '불가'(DB에 없는 데이터) 문항은 골든셋에서 뺌 (2026-11-20)
+            continue
         items.append(item)
     for i, (intent, q) in enumerate(EXTRA_ADMIN, 1):
         items.append({"id": f"A-X{i:02d}", "no": None, "category": "의도 경계", "question": q, "role": "hr_admin", "intent": intent,
@@ -596,7 +595,7 @@ def main():
             it["split"] = "dev" if (k + 1) * 32 // 100 > k * 32 // 100 else "test"
     out = {"name": "누리철도 HR 챗봇 관리자 골든셋", "version": str(date.today()), "as_of": str(AS_OF),
            "source": "질문셋/관리자_질문셋_v2.csv + 조문 매핑 + DB/data CSV 직접 계산",
-           "fields": {"intent": "rule / data / both / unavailable / no_question / out_of_scope (117번만 role=employee, refuse)",
+           "fields": {"intent": "rule / data / both / no_question / out_of_scope (117번만 role=employee, refuse)",
                       "tool·params": "정답 집계 도구와 인자 (설계도의 관리자 tool·params)",
                       "expected": "집계 기대값 {기준, 건수, 표(앞 50행), ids(전체 사번)}. null이면 규정·데이터가 부족해 계산 불가",
                       "gold_chunks.primary": "정답 조문 ID (rule·both만)", "key_facts": "답에 꼭 들어갈 내용 (규정 부분)",
@@ -614,7 +613,7 @@ def main():
             print("  tool 없음:", i["id"], i["question"])
         if i["intent"] in ("rule", "both") and not i["gold_chunks"]["primary"]:
             print("  조문 없음:", i["id"], i["question"])
-        if i["intent"] in ("rule", "both", "data", "unavailable") and not i["key_facts"] and not i["expected"]:
+        if i["intent"] in ("rule", "both", "data") and not i["key_facts"] and not i["expected"]:
             print("  정답 없음:", i["id"], i["question"])
 
 

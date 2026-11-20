@@ -1,6 +1,6 @@
 # 관리자(hr_admin) 골든셋
 
-결과 파일: [`../admin_golden_set.json`](../admin_golden_set.json) — 133문항 (질문셋 119 + 의도 경계 10 + 대화 기록 정책 4), 기준일 2026-11-09
+결과 파일: [`../admin_golden_set.json`](../admin_golden_set.json) — 123문항 (질문셋 109 + 의도 경계 10 + 대화 기록 정책 4). 질문셋 '불가'(DB에 없는 데이터) 10문항은 2026-11-20에 뺌, 기준일 2026-11-09
 
 ## 만드는 법
 
@@ -15,12 +15,12 @@ python build_admin_golden.py   # 질문셋 CSV + basis_map + labels_rule + DB/da
 
 | 필드 | 뜻 | 쓰는 단계 |
 | --- | --- | --- |
-| `intent` | rule 50 · both 43 · data 17 · unavailable 10 · no_question 5 · out_of_scope 5 · refuse 3 (117번 일반 직원 계정, A-L03·L04 대화 기록 조회) | ① 의도 분류 |
+| `intent` | rule 50 · both 43 · data 17 · no_question 5 · out_of_scope 5 · refuse 3 (117번 일반 직원 계정, A-L03·L04 대화 기록 조회) | ① 의도 분류 |
 | `tool` · `params` | 정답 집계 도구와 인자 (58문항) | ① 도구 선택 |
 | `gold_chunks.primary` | 정답 조문 ID (rule·both 93문항) | ② 검색 · ③ 리랭커 |
 | `expected` | 집계 기대값 `{기준, 건수, 표(앞 50행), ids(전체 사번)}` (56문항) | 집계 조회 |
 | `key_facts` · `must_not_include` | 답에 꼭 들어갈 내용 / 하면 틀리는 주장 | ④ 답변 생성 |
-| `split` | dev 36 · test 87 · uncertain 6 | |
+| `split` | dev 34 · test 83 · uncertain 6 | |
 
 ## 정할 때 쓴 가정 (검수 필요)
 
