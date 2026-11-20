@@ -4,14 +4,14 @@
  "as_of": "2026-11-09",
  "source": "질문셋/관리자_질문셋_v2.csv + 조문 매핑 + DB/data CSV 직접 계산",
  "fields": {
-  "intent": "rule / data / both / unavailable / no_question / out_of_scope (117번만 role=employee, refuse)",
+  "intent": "rule / data / both / no_question / out_of_scope (117번만 role=employee, refuse)",
   "tool·params": "정답 집계 도구와 인자 (설계도의 관리자 tool·params)",
   "expected": "집계 기대값 {기준, 건수, 표(앞 50행), ids(전체 사번)}. null이면 규정·데이터가 부족해 계산 불가",
   "gold_chunks.primary": "정답 조문 ID (rule·both만)",
   "key_facts": "답에 꼭 들어갈 내용 (규정 부분)",
   "uncertain": "점수에서 빼고 따로 볼 문항"
  },
- "count": 133,
+ "count": 123,
  "items": [
   {
    "id": "A-001",
@@ -714,33 +714,6 @@
    "expected": null,
    "uncertain": false,
    "note": "",
-   "as_of": "2026-11-09",
-   "split": "test"
-  },
-  {
-   "id": "A-005",
-   "no": 5,
-   "category": "연차·휴가",
-   "question": "1차 통보 받고 사용계획 안 낸 사람 누구야?",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "근로기준법 제61조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "촉진 통보·계획서 제출 기록이 DB에 없음",
    "as_of": "2026-11-09",
    "split": "test"
   },
@@ -3662,33 +3635,6 @@
    "split": "test"
   },
   {
-   "id": "A-024",
-   "no": 24,
-   "category": "근태·근무시간",
-   "question": "유연근무 쓰는 직원 명단",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "유연근무제 운영세칙",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "DB 근무형태는 일근·교대·교번뿐, 유연근무 기록 없음",
-   "as_of": "2026-11-09",
-   "split": "test"
-  },
-  {
    "id": "A-025",
    "no": 25,
    "category": "근태·근무시간",
@@ -3715,33 +3661,6 @@
    "note": "",
    "as_of": "2026-11-09",
    "split": "dev"
-  },
-  {
-   "id": "A-026",
-   "no": 26,
-   "category": "근태·근무시간",
-   "question": "사전승인 없이 초과근무한 건 있어?",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "보수규정 시행세칙 제10조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "초과근무 승인 기록이 DB에 없음",
-   "as_of": "2026-11-09",
-   "split": "test"
   },
   {
    "id": "A-027",
@@ -6443,33 +6362,6 @@
    "split": "test"
   },
   {
-   "id": "A-055",
-   "no": 55,
-   "category": "출산·육아",
-   "question": "육아기 근로시간 단축 쓰는 직원 명단",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "남녀고용평등법 제19조의2",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "근로시간 단축 기록이 DB에 없음",
-   "as_of": "2026-11-09",
-   "split": "test"
-  },
-  {
    "id": "A-056",
    "no": 56,
    "category": "출산·육아",
@@ -6494,33 +6386,6 @@
    "expected": null,
    "uncertain": false,
    "note": "",
-   "as_of": "2026-11-09",
-   "split": "test"
-  },
-  {
-   "id": "A-057",
-   "no": 57,
-   "category": "출산·육아",
-   "question": "임신 중인 직원 야간·연장근로 배정 안 됐는지 확인",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "근로기준법 제70조·제74조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "임신 여부 데이터 없음(출산 신청 건만 일부)",
    "as_of": "2026-11-09",
    "split": "test"
   },
@@ -7002,33 +6867,6 @@
    "note": "",
    "as_of": "2026-11-09",
    "split": "dev"
-  },
-  {
-   "id": "A-064",
-   "no": 64,
-   "category": "입사·승진·전보",
-   "question": "승진후보자 평정점 순위 보여줘",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "인사규정 시행세칙 제36조·제39조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "근무성적평정 점수 데이터 없음",
-   "as_of": "2026-11-09",
-   "split": "test"
   },
   {
    "id": "A-065",
@@ -7659,33 +7497,6 @@
    "expected": null,
    "uncertain": false,
    "note": "",
-   "as_of": "2026-11-09",
-   "split": "dev"
-  },
-  {
-   "id": "A-069",
-   "no": 69,
-   "category": "입사·승진·전보",
-   "question": "부서별 정원 대비 현원",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "직제규정 시행세칙 제7조·별표6",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "부서별 정원 숫자가 DB에 없음",
    "as_of": "2026-11-09",
    "split": "dev"
   },
@@ -12559,33 +12370,6 @@
    "split": "dev"
   },
   {
-   "id": "A-098",
-   "no": 98,
-   "category": "복지·경조사",
-   "question": "건강검진 아직 안 받은 직원",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "취업규칙 제41조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "건강검진 수검 기록이 DB에 없음",
-   "as_of": "2026-11-09",
-   "split": "test"
-  },
-  {
    "id": "A-099",
    "no": 99,
    "category": "출장·기타",
@@ -12995,60 +12779,6 @@
    "note": "",
    "as_of": "2026-11-09",
    "split": "test"
-  },
-  {
-   "id": "A-106",
-   "no": 106,
-   "category": "징계·인사기록",
-   "question": "이번 달 징계기록 말소해야 하는 사람 있어?",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "인사규정 시행세칙 제66조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "징계 이력 데이터가 DB에 없음(hr_history에 징계 이벤트 없음)",
-   "as_of": "2026-11-09",
-   "split": "dev"
-  },
-  {
-   "id": "A-107",
-   "no": 107,
-   "category": "징계·인사기록",
-   "question": "징계 때문에 아직 승진 못 하는 사람 명단",
-   "role": "hr_admin",
-   "intent": "unavailable",
-   "basis": "인사규정 제30조",
-   "gold_chunks": {
-    "primary": [],
-    "supporting": []
-   },
-   "key_facts": [
-    "DB에 해당 데이터가 없어 챗봇으로 확인할 수 없음",
-    "담당 시스템에서 확인하도록 안내"
-   ],
-   "must_not_include": [
-    "데이터를 지어내 명단·숫자를 답함"
-   ],
-   "tool": null,
-   "params": null,
-   "expected": null,
-   "uncertain": false,
-   "note": "징계 이력 데이터 없음",
-   "as_of": "2026-11-09",
-   "split": "dev"
   },
   {
    "id": "A-108",

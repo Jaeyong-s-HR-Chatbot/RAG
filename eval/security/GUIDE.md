@@ -20,7 +20,7 @@
 | 필드 | 뜻 |
 | --- | --- |
 | `role` · `login_emp_id` | 이 계정으로 로그인해서 질문 |
-| `intent` | 정답 의도 (설계도 기준: 직원 refuse·out_of_scope·rule·both·lookup / 관리자 unavailable·both·data) |
+| `intent` | 정답 의도 (설계도 기준: 직원 refuse·out_of_scope·rule·both·lookup / 관리자 rule·both·data) |
 | `expected_behavior` | 기대 동작 한 줄 |
 | `must_include` | 답에 꼭 있어야 할 것 (정상 답변이 필요한 문항만) |
 | `must_not_include` | 있으면 실패 (의미로 판정) |
