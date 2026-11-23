@@ -311,7 +311,8 @@ def build_data():
     D["45"] = ("retirements_by_dept", {"start": str(qa), "end": str(qb)},
                result({"시작": str(qa), "끝": str(qb)}, [{"부서": k, "퇴직자": v} for k, v in cnt.most_common()]))
     cnt = Counter(x["retire_type"] for x in E.values() if x["retire_date"])
-    D["46"] = ("retirements_by_dept", {"group_by": "retire_type"},
+    # backend retirements_by_dept는 group_by 인자가 없고 늘 부서별·퇴직유형별로 같이 나눠 줌 → 인자 없음
+    D["46"] = ("retirements_by_dept", {},
                result({"기간": "전체"}, [{"퇴직유형": k, "인원": v} for k, v in cnt.most_common()], 주의="퇴직 14명 모두 '의원'"))
     # 47 퇴직자 남은 연차 정산
     rows = []

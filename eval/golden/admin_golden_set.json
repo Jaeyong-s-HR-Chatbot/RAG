@@ -5919,9 +5919,7 @@
    "key_facts": [],
    "must_not_include": [],
    "tool": "retirements_by_dept",
-   "params": {
-    "group_by": "retire_type"
-   },
+   "params": {},
    "expected": {
     "기준": {
      "기간": "전체"
