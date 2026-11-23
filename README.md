@@ -67,6 +67,7 @@ GPU별 모델 선택, vLLM 실행, 환경변수, 로컬 백엔드 연결은 [doc
 | 노트북 | Colab |
 | --- | --- |
 | 관리자 파이프라인 평가 (`colab/admin_eval.ipynb`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jaeyong-s-HR-Chatbot/RAG/blob/main/colab/admin_eval.ipynb) |
+| 의도 분류 + B 검색 성능 (`colab/intent_search_eval.ipynb`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jaeyong-s-HR-Chatbot/RAG/blob/main/colab/intent_search_eval.ipynb) |
 
 ## 현재 검색 기준선
 
