@@ -563,8 +563,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -594,8 +594,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02",
-     "r08-0071"
+     "r08-0028-02",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -617,7 +617,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -648,7 +648,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -670,7 +670,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -701,7 +701,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -984,7 +984,7 @@
    "gold_hang": {
     "primary": [
      "r07-0053",
-     "r08-0019"
+     "r08-0019-01"
     ],
     "supporting": [],
     "auto": true,
@@ -1010,7 +1010,7 @@
    ],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -1038,7 +1038,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -1927,8 +1927,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -1957,7 +1957,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": [],
     "auto": false,
@@ -1981,7 +1981,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -2255,7 +2255,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -2276,7 +2276,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04"
+     "r08-0028-04"
     ],
     "supporting": [],
     "auto": true,
@@ -2379,7 +2379,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -2407,7 +2407,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -2429,7 +2429,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -2450,7 +2450,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -2618,7 +2618,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -2874,7 +2874,7 @@
      "r01-0013",
      "r02-0017",
      "r03-0068",
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -2904,7 +2904,7 @@
      "r01-0013-01",
      "r02-0017",
      "r03-0068",
-     "r08-0030-06"
+     "r08-0028-06"
     ],
     "supporting": [],
     "auto": true,
@@ -3158,7 +3158,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -3179,7 +3179,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -3246,7 +3246,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r04-0025"
+     "r04-0024"
     ],
     "supporting": []
    },
@@ -3267,8 +3267,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r04-0025-01",
-     "r04-0025-03"
+     "r04-0024-01",
+     "r04-0024-03"
     ],
     "supporting": [],
     "auto": true,
@@ -3433,7 +3433,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0050"
+     "r08-0048"
     ],
     "supporting": [
      "r08-0006"
@@ -3465,7 +3465,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0050"
+     "r08-0048"
     ],
     "supporting": [],
     "auto": false,
@@ -3838,7 +3838,7 @@
    ],
    "gold_chunks": {
     "primary": [
-     "r08-0050"
+     "r08-0048"
     ],
     "supporting": [
      "r08-0006"
@@ -3870,7 +3870,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0050"
+     "r08-0048"
     ],
     "supporting": [],
     "auto": false,
@@ -4147,7 +4147,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -4998,8 +4998,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -5025,9 +5025,9 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-01",
-     "r08-0030-03",
-     "r08-0071"
+     "r08-0028-01",
+     "r08-0028-03",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -5403,7 +5403,7 @@
    "gold_hang": {
     "primary": [
      "r07-0053",
-     "r08-0019"
+     "r08-0019-01"
     ],
     "supporting": [],
     "auto": true,
@@ -5431,7 +5431,7 @@
    ],
    "gold_chunks": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": [
      "r08-0030"
@@ -5460,7 +5460,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": [],
     "auto": false,
@@ -6527,7 +6527,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -6556,7 +6556,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -6578,7 +6578,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -6609,7 +6609,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -6631,7 +6631,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -6674,7 +6674,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -6695,7 +6695,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04"
+     "r08-0028-04"
     ],
     "supporting": [],
     "auto": true,
@@ -6981,7 +6981,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -7002,7 +7002,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04"
+     "r08-0028-04"
     ],
     "supporting": [],
     "auto": true,
@@ -7025,8 +7025,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -7052,8 +7052,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-01",
-     "r08-0071"
+     "r08-0028-01",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -7076,8 +7076,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -7103,8 +7103,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-01",
-     "r08-0071"
+     "r08-0028-01",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -7126,7 +7126,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -7169,7 +7169,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -7507,8 +7507,8 @@
      "r01-0013",
      "r03-0061",
      "r03-0068",
-     "r08-0030",
-     "r08-0071",
+     "r08-0028",
+     "r08-0069",
      "S01-0001"
     ],
     "supporting": []
@@ -7548,9 +7548,9 @@
    "gold_hang": {
     "primary": [
      "r03-0068",
-     "r08-0030-04",
-     "r08-0030-06",
-     "r08-0071",
+     "r08-0028-04",
+     "r08-0028-06",
+     "r08-0069",
      "S01-0001"
     ],
     "supporting": [],
@@ -7664,8 +7664,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -7687,8 +7687,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04",
-     "r08-0071"
+     "r08-0028-04",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -7709,7 +7709,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -7734,7 +7734,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -7845,7 +7845,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r04-0025"
+     "r04-0024"
     ],
     "supporting": []
    },
@@ -7866,9 +7866,9 @@
    },
    "gold_hang": {
     "primary": [
-     "r04-0025-01",
-     "r04-0025-03",
-     "r04-0025-04"
+     "r04-0024-01",
+     "r04-0024-03",
+     "r04-0024-04"
     ],
     "supporting": [],
     "auto": true,
@@ -7942,7 +7942,7 @@
    "gold_chunks": {
     "primary": [
      "r04-0007",
-     "r04-0013"
+     "r04-0012"
     ],
     "supporting": []
    },
@@ -8443,7 +8443,7 @@
    "gold_chunks": {
     "primary": [
      "r08-0006",
-     "r08-0050"
+     "r08-0048"
     ],
     "supporting": []
    },
@@ -8465,7 +8465,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0050"
+     "r08-0048"
     ],
     "supporting": [],
     "auto": false,
@@ -9301,7 +9301,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r04-0025"
+     "r04-0024"
     ],
     "supporting": []
    },
@@ -9322,8 +9322,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r04-0025-01",
-     "r04-0025-03"
+     "r04-0024-01",
+     "r04-0024-03"
     ],
     "supporting": [],
     "auto": true,
@@ -9712,8 +9712,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -9746,8 +9746,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02",
-     "r08-0071"
+     "r08-0028-02",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -9770,8 +9770,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -9804,8 +9804,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04",
-     "r08-0071"
+     "r08-0028-04",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -9827,7 +9827,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -10047,8 +10047,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r04-0011",
-     "r04-0013"
+     "r04-0010",
+     "r04-0012"
     ],
     "supporting": []
    },
@@ -10919,7 +10919,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r04-0025",
+     "r04-0024",
      "L01-0089"
     ],
     "supporting": []
@@ -10943,7 +10943,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r04-0025-04",
+     "r04-0024-04",
      "L01-0089"
     ],
     "supporting": [],
@@ -10967,7 +10967,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -10995,7 +10995,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-02"
+     "r08-0028-02"
     ],
     "supporting": [],
     "auto": true,
@@ -11017,7 +11017,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -11038,7 +11038,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04"
+     "r08-0028-04"
     ],
     "supporting": [],
     "auto": true,
@@ -11425,8 +11425,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -11448,8 +11448,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04",
-     "r08-0071"
+     "r08-0028-04",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -11471,8 +11471,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -11504,8 +11504,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-01",
-     "r08-0071"
+     "r08-0028-01",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -11728,7 +11728,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030"
+     "r08-0028"
     ],
     "supporting": []
    },
@@ -12110,8 +12110,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -12133,8 +12133,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0030-04",
-     "r08-0071"
+     "r08-0028-04",
+     "r08-0069"
     ],
     "supporting": [],
     "auto": true,
@@ -12155,7 +12155,7 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r04-0025"
+     "r04-0024"
     ],
     "supporting": []
    },
@@ -12176,7 +12176,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r04-0025-04"
+     "r04-0024-04"
     ],
     "supporting": [],
     "auto": true,
@@ -12197,8 +12197,8 @@
    "must_not_include": [],
    "gold_chunks": {
     "primary": [
-     "r08-0030",
-     "r08-0071"
+     "r08-0028",
+     "r08-0069"
     ],
     "supporting": []
    },
@@ -12231,7 +12231,7 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0071"
+     "r08-0069"
     ],
     "supporting": [],
     "auto": false,
@@ -12360,9 +12360,9 @@
      "r03-0058",
      "r03-0059",
      "r04-0007",
-     "r04-0025",
-     "r08-0030",
-     "r08-0071",
+     "r04-0024",
+     "r08-0028",
+     "r08-0069",
      "r13-0045",
      "L01-0086",
      "L01-0087",
@@ -12401,11 +12401,11 @@
      "r03-0058-01",
      "r03-0058-03",
      "r04-0007-02",
-     "r04-0025-01",
-     "r04-0025-03",
-     "r04-0025-04",
-     "r08-0030-04",
-     "r08-0071",
+     "r04-0024-01",
+     "r04-0024-03",
+     "r04-0024-04",
+     "r08-0028-04",
+     "r08-0069",
      "r13-0045-02",
      "r13-0045-03",
      "L01-0086-01",
@@ -12669,8 +12669,8 @@
    "gold_chunks": {
     "primary": [
      "r04-0007",
-     "r04-0011",
-     "r04-0013"
+     "r04-0010",
+     "r04-0012"
     ],
     "supporting": []
    },
@@ -12694,7 +12694,7 @@
    "gold_hang": {
     "primary": [
      "r04-0007-02",
-     "r04-0011-01"
+     "r04-0010-01"
     ],
     "supporting": [],
     "auto": false,
