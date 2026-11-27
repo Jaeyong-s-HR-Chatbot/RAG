@@ -6,7 +6,7 @@
 | [`golden_set.json`](golden_set.json) | 279 | ② 검색 · ③ 리랭커 · 계산 · ④ 답변 생성 |
 | [`pension/pension_golden_set.json`](pension/pension_golden_set.json) | 20 | 퇴직연금 확장 문항 (규정·본인 조회·계산·거절, 팀 확정 전) |
 | [`rerank_cases.jsonl`](rerank_cases.jsonl) | 30 | ③ 리랭커 (되묻기 · 함정 조문) |
-| [`hang_review.csv`](hang_review.csv) | 87 | 항 단위 정답 중 사람이 확인할 문항 (`add_hang_gold.py`) |
+| [`hang_review.csv`](hang_review.csv) | 0 | 항 단위 정답 중 사람이 확인할 문항 (`add_hang_gold.py`). 2026-11-27 87문항 모두 확인함 |
 | [`../security/security_cases.jsonl`](../security/security_cases.jsonl) | 32 | 보안 |
 
 ## 본인 데이터 문항 (golden_set.json, needs_hr_data 33문항)
@@ -43,6 +43,7 @@ python add_hang_gold.py ../../../DB/data/hang   # DB 저장소의 data/hang (old
 - 항으로 안 나뉜 조문(별표·짧은 조문)은 조각 그대로 써요
 - 항으로 나뉜 조문은 `key_facts`와 정답 문장을 항마다 맞춰 보고 골라요 (숫자+단위 3점, 낱말 1점, 띄어쓰기 무시. 2점 이상이면서 2위보다 높은 항만)
 - 결과: 정답 조각이 있는 270문항 중 **자동 183**, **확인 필요 87**(조문 96건)
+- 2026-11-27: 확인 필요 87문항을 모두 골라 `auto: "checked"`로 바꿈 (자동 183 · 확인함 87). 골라야 할 조문마다 그 항 조각을 하나 이상 넣었고, 질문과 관련이 약한 조문(예: 임금피크제 운영내규 제9조 교육)은 ①항을 넣음
 - `gold_hang.auto`: `true` 자동 매칭 / `false` 못 고름(`review`에 조문) / `"checked"` 사람이 확인함
 - 확인 필요 문항은 `hang_review.csv`(질문·key_facts·정답·후보 항)를 보고 `golden_set.json`의 `gold_hang.primary`를 고친 뒤 `auto`를 `"checked"`로 바꿔요. 다시 실행해도 `"checked"`는 덮어쓰지 않아요
 - 자동 매칭도 틀릴 수 있어요 (예: P2-7-05는 ③ 외에 "절차" 낱말 때문에 ⑦도 골랐어요)
