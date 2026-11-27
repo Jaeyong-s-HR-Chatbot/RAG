@@ -841,13 +841,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0053"
+     "r07-0053",
+     "r08-0017-01",
+     "r08-0017-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제13조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -935,13 +935,12 @@
     "primary": [
      "r17-0004",
      "r17-0005-03",
-     "r17-0005-04"
+     "r17-0005-04",
+     "r17-0006-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r17:제5조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1091,13 +1090,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r21-0025-01"
+     "r21-0025-01",
+     "r21-0013-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r21:제11조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1136,12 +1134,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "L07-0035-01",
+     "L07-0035-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L07:제21조의3"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1236,12 +1235,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "L09-0067-01",
+     "L09-0067-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L09:제41조의2"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1329,13 +1329,13 @@
    "gold_hang": {
     "primary": [
      "r12-0016",
-     "r12-0039"
+     "r12-0039",
+     "r12-0010-02",
+     "r12-0010-05"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1379,14 +1379,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r12-0023"
+     "r12-0023",
+     "r12-0024-01",
+     "r12-0025-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제22조",
-     "r12:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1433,15 +1432,14 @@
    },
    "gold_hang": {
     "primary": [
-     "r03-0061-01"
+     "r03-0061-01",
+     "r12-0024-01",
+     "r12-0025-02",
+     "r12-0026-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제22조",
-     "r12:제23조",
-     "r12:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1479,12 +1477,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0011-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제10조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1616,12 +1614,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0015-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제14조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1679,7 +1677,8 @@
    },
    "gold_hang": {
     "primary": [
-     "r11-0013"
+     "r11-0013",
+     "r11-0010-01"
     ],
     "supporting": [
      "r11-0004",
@@ -1691,10 +1690,8 @@
      "r11-0011",
      "r11-0012"
     ],
-    "auto": false,
-    "review": [
-     "r11:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1833,13 +1830,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r05-0027"
+     "r05-0027",
+     "r05-0009-01",
+     "r05-0009-05"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1877,12 +1874,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r05-0009-05"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -1957,13 +1954,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0069"
+     "r08-0069",
+     "r08-0028-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2001,12 +1997,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-02",
+     "r08-0028-03"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2093,13 +2090,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-03"
+     "r13-0045-03",
+     "r07-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r07:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2140,12 +2136,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r13-0045-03"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2188,13 +2184,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0010-01"
+     "r07-0010-01",
+     "r13-0045-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2645,12 +2640,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2697,13 +2692,12 @@
    "gold_hang": {
     "primary": [
      "r09-0008-01",
-     "r11-0011"
+     "r11-0011",
+     "L06-0003-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L06:제3조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -2745,13 +2739,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r03-0028"
+     "r03-0028",
+     "r03-0023-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제22조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -3040,12 +3033,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "L02-0044-01",
+     "L02-0044-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L02:제22조의2"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -3088,13 +3082,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-03"
+     "r13-0045-03",
+     "r07-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r07:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -3355,13 +3348,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r11-0004"
+     "r11-0004",
+     "r03-0039-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제38조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -3465,13 +3457,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0048"
+     "r08-0048",
+     "r08-0006-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제5조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -3530,7 +3521,8 @@
    "gold_hang": {
     "primary": [
      "r11-0012",
-     "r11-0013"
+     "r11-0013",
+     "r11-0010-01"
     ],
     "supporting": [
      "r11-0004",
@@ -3541,10 +3533,8 @@
      "r11-0009-03",
      "r11-0011"
     ],
-    "auto": false,
-    "review": [
-     "r11:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -3870,13 +3860,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0048"
+     "r08-0048",
+     "r08-0006-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제5조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -4010,13 +3999,12 @@
      "r09-0008-01",
      "r09-0008-03",
      "r11-0008",
-     "r11-0011"
+     "r11-0011",
+     "r03-0039-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제38조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -4167,12 +4155,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -4216,13 +4204,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0029-01"
+     "r13-0029-01",
+     "r12-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -4307,12 +4294,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r03-0024-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -4410,12 +4397,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0008-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -4656,13 +4643,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r03-0028"
+     "r03-0028",
+     "r03-0021-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제20조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5212,13 +5198,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0053"
+     "r07-0053",
+     "r08-0017-01",
+     "r08-0017-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제13조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5257,12 +5243,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0017-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제13조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5354,13 +5340,12 @@
     "primary": [
      "r17-0004",
      "r17-0005-03",
-     "r17-0005-04"
+     "r17-0005-04",
+     "r17-0006-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r17:제5조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5460,13 +5445,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0069"
+     "r08-0069",
+     "r08-0028-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5666,13 +5650,12 @@
    "gold_hang": {
     "primary": [
      "r12-0023",
-     "r12-0025-03"
+     "r12-0025-03",
+     "r12-0024-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제22조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5759,13 +5742,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0029-01"
+     "r13-0029-01",
+     "r12-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5815,13 +5797,12 @@
     "primary": [
      "r03-0061-01",
      "r12-0024-02",
-     "r12-0026-02"
+     "r12-0026-02",
+     "r12-0025-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5918,12 +5899,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "L09-0067-01",
+     "L09-0067-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L09:제41조의2"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -5961,12 +5943,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0011-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제10조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6110,13 +6092,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r05-0027"
+     "r05-0027",
+     "r05-0009-05"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6154,12 +6135,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r05-0009-05"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6304,13 +6285,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r05-0027"
+     "r05-0027",
+     "r05-0009-01",
+     "r05-0009-05"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6449,13 +6430,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r05-0027"
+     "r05-0027",
+     "r05-0009-01",
+     "r05-0009-05"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6651,12 +6632,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6787,13 +6768,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-03"
+     "r13-0045-03",
+     "r07-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r07:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6834,12 +6814,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r13-0045-03"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -6881,13 +6861,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0010-01"
+     "r07-0010-01",
+     "r13-0045-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -7146,12 +7125,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-02",
+     "r08-0028-03"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -7189,12 +7169,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -7356,18 +7336,18 @@
    },
    "gold_hang": {
     "primary": [
-     "r15-0020"
+     "r15-0020",
+     "r15-0006-01",
+     "r15-0006-04",
+     "r15-0009-01"
     ],
     "supporting": [
      "r15-0017",
      "r15-0018",
      "r15-0019"
     ],
-    "auto": false,
-    "review": [
-     "r15:제5조",
-     "r15:제8조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -7551,14 +7531,13 @@
      "r08-0028-04",
      "r08-0028-06",
      "r08-0069",
-     "S01-0001"
+     "S01-0001",
+     "r01-0013-01",
+     "r03-0061-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r01:제12조",
-     "r03:제58조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -7915,13 +7894,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-02"
+     "r13-0045-02",
+     "r04-0007-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r04:제6조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -7964,13 +7942,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r04-0007-02"
+     "r04-0007-02",
+     "r04-0012-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r04:제11조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -8238,13 +8215,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r21-0013-01"
+     "r21-0013-01",
+     "r13-0045-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -8286,13 +8262,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-03"
+     "r13-0045-03",
+     "r07-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r07:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -8465,13 +8440,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0048"
+     "r08-0048",
+     "r08-0006-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제5조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -8532,7 +8506,8 @@
     "primary": [
      "r11-0011",
      "r11-0012",
-     "r11-0013"
+     "r11-0013",
+     "r11-0010-01"
     ],
     "supporting": [
      "r11-0004",
@@ -8542,10 +8517,8 @@
      "r11-0008",
      "r11-0009-03"
     ],
-    "auto": false,
-    "review": [
-     "r11:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -8630,12 +8603,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r03-0024-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -8674,12 +8647,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0008-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -9040,13 +9013,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0053"
+     "r07-0053",
+     "r03-0024-04"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -9176,13 +9148,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r03-0061-01"
+     "r03-0061-01",
+     "r03-0024-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -9688,13 +9659,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r03-0024-01",
+     "L01-0072-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r03:제23조",
-     "L01:제60조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -9847,12 +9818,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-02",
+     "r08-0028-03"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10069,13 +10041,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r04-0010-04",
+     "r04-0012-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r04:제9조",
-     "r04:제11조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10114,12 +10086,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0017-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제13조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10157,12 +10129,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0008-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10359,14 +10331,13 @@
    },
    "gold_hang": {
     "primary": [
-     "r12-0023"
+     "r12-0023",
+     "r12-0024-01",
+     "r12-0025-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제22조",
-     "r12:제23조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10410,13 +10381,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0029-01"
+     "r13-0029-01",
+     "r12-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10454,12 +10424,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r12-0011-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제10조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10497,12 +10467,13 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "L09-0067-01",
+     "L09-0067-02"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L09:제41조의2"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10713,13 +10684,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r05-0027"
+     "r05-0027",
+     "r05-0009-05"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -10757,12 +10727,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r05-0009-05"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r05:제7조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -11129,13 +11099,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-03"
+     "r13-0045-03",
+     "r07-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r07:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -11176,12 +11145,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r13-0045-03"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -11223,13 +11192,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0010-01"
+     "r07-0010-01",
+     "r13-0045-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -11401,13 +11369,12 @@
     "primary": [
      "r03-0061-01",
      "r04-0004",
-     "r13-0045-03"
+     "r13-0045-03",
+     "r07-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r07:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -11569,18 +11536,18 @@
    },
    "gold_hang": {
     "primary": [
-     "r15-0020"
+     "r15-0020",
+     "r15-0006-01",
+     "r15-0006-04",
+     "r15-0009-01"
     ],
     "supporting": [
      "r15-0017",
      "r15-0018",
      "r15-0019"
     ],
-    "auto": false,
-    "review": [
-     "r15:제5조",
-     "r15:제8조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -11748,12 +11715,12 @@
     "supporting": []
    },
    "gold_hang": {
-    "primary": [],
+    "primary": [
+     "r08-0028-01"
+    ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -12231,13 +12198,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r08-0069"
+     "r08-0069",
+     "r08-0028-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r08:제24조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -12410,13 +12376,13 @@
      "r13-0045-03",
      "L01-0086-01",
      "L01-0086-05",
-     "L01-0086-07"
+     "L01-0086-07",
+     "L01-0088-01",
+     "L01-0088-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "L01:제74조의2"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -12694,13 +12660,12 @@
    "gold_hang": {
     "primary": [
      "r04-0007-02",
-     "r04-0010-01"
+     "r04-0010-01",
+     "r04-0012-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r04:제11조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -12743,13 +12708,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0045-02"
+     "r13-0045-02",
+     "r04-0007-02"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r04:제6조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -12791,13 +12755,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r07-0010-01"
+     "r07-0010-01",
+     "r13-0045-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r13:제44조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
@@ -13209,13 +13172,12 @@
    },
    "gold_hang": {
     "primary": [
-     "r13-0029-01"
+     "r13-0029-01",
+     "r12-0010-01"
     ],
     "supporting": [],
-    "auto": false,
-    "review": [
-     "r12:제9조"
-    ]
+    "auto": "checked",
+    "review": []
    }
   },
   {
